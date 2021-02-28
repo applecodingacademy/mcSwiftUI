@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct mcSwiftUIApp: App {
+    @StateObject var empleados = EmpleadosModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            EmpleadosView()
+                .environmentObject(empleados)
         }
     }
 }
